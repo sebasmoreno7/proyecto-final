@@ -1,6 +1,6 @@
 # Fun Food Friends · React exercise
 
-Historical React prototype with a form for a name and an item to bring. The interface and local input state are present in `src/App.js`, but the form does not save items or render a list. This repository is an unfinished exercise, not a working shared list.
+Historical React prototype with a form for a name and an item to bring. Submitting the form now adds the item to an in-memory list. Items disappear when the page reloads; this is an unfinished exercise, not a working shared list.
 
 ## Stack
 
@@ -8,6 +8,6 @@ React 16 and Create React App, as declared in `package.json`. A Firebase file ex
 
 ## Explore locally
 
-From the repository root, run `yarn install` and `yarn start`. The package also declares `yarn test` and `yarn build`; their presence does not imply the current project passes them.
+From the repository root, run `yarn install` and `yarn start`. Run `CI=true yarn test --watch=false --runInBand` for the form tests. This historical Create React App version may need `NODE_OPTIONS=--openssl-legacy-provider yarn build` on Node 20.
 
 The original Create React App scaffold documentation was replaced with this project-specific summary.
