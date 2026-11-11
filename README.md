@@ -1,13 +1,20 @@
-# Fun Food Friends · React exercise
+# gamee
 
-Historical React prototype with a form for a name and an item to bring. Submitting the form now adds the item to an in-memory list. Items disappear when the page reloads; this is an unfinished exercise, not a working shared list.
+## Desarrollo y verificación
 
-## Stack
+Requiere Node >=22.12.0. La compilación usa Vite y las pruebas Vitest.
 
-React 16 and Create React App, as declared in `package.json`. A Firebase file exists in `src/`, but it is not integrated into the visible app flow.
+```bash
+npm ci --ignore-scripts
+npm start
+npm test
+npm run build
+npm audit
+```
 
-## Explore locally
+El resultado de producción se conserva en `build/`. Las rutas de la aplicación
+y los recursos de `public/` se mantienen. Las variables públicas existentes
+`REACT_APP_*` siguen disponibles; nunca uses ese prefijo para secretos.
 
-From the repository root, run `yarn install` and `yarn start`. Run `CI=true yarn test --watch=false --runInBand` for the form tests. This historical Create React App version may need `NODE_OPTIONS=--openssl-legacy-provider yarn build` on Node 20.
-
-The original Create React App scaffold documentation was replaced with this project-specific summary.
+La migración retira Create React App y su cadena de compilación sin mantenimiento.
+Las pruebas existentes comprueban el comportamiento de la aplicación.
